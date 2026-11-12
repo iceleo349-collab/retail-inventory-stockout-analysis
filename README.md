@@ -64,6 +64,17 @@ The Power BI report is organized into three pages:
 - Date-range filtering
 - Trend exploration to help identify when stockouts occurred
 
+### Dashboard screenshots
+
+#### Inventory Overview
+![Inventory Overview dashboard](Screenshots/Screenshot%20(4).png)
+
+#### Inventory Risk
+![Inventory Risk dashboard](Screenshots/Screenshot%20(5).png)
+
+#### Trends
+![Trends dashboard](Screenshots/Screenshot%20(6).png)
+
 Dashboard screenshots are available in the [Screenshots folder](Screenshots/). The Power BI report is in the [PowerBI folder](PowerBI/).
 
 ## Selected findings
