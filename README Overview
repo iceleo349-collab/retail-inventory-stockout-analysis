@@ -1,0 +1,149 @@
+# Retail Inventory & Stockout Analysis
+
+**SQL Server | Power BI | Data Analysis**
+
+## Project Overview
+
+This project analyzes retail inventory, product demand, and stockout patterns across multiple stores and product categories.
+
+Using SQL Server for data analysis and Power BI for visualization, the project investigates inventory coverage, stockout risk, promotional demand, and potential early-warning indicators.
+
+The goal is to identify inventory patterns that could help retail businesses make more informed inventory management decisions.
+
+## Business Questions
+
+- Which products and stores experience the greatest stockout risk?
+- How does promotional activity relate to product demand and stockout rates?
+- Which product categories require closer inventory monitoring?
+- Can historical inventory levels provide an early warning of potential stockouts?
+- How can inventory performance be communicated through an interactive dashboard?
+
+## Tools & Technologies
+
+- Microsoft SQL Server
+- SQL
+- Microsoft Power BI
+- GitHub
+
+## Dataset
+
+**Source:** [Kaggle – Retail Store Inventory and Demand Forecasting](https://www.kaggle.com/dsv/11895299)
+
+The dataset contains approximately 76,000 records covering January 2022 through January 2024.
+
+It includes:
+- Store and product identifiers
+- Product categories and regions
+- Inventory levels
+- Units sold and units ordered
+- Estimated demand
+- Promotional activity
+- Pricing and competitor pricing
+- Weather and seasonal information
+
+**Important:** This is a synthetic dataset. Findings demonstrate analytical methods and should not be interpreted as verified results from an actual retail business.
+
+## Power BI Dashboard
+
+The report contains three pages:
+
+### 1. Inventory Overview
+- Overall stockout rate
+- Stockout rate by store
+- Promotion versus non-promotion comparison
+- Product-level stockout information
+- Store and category filters
+
+### 2. Inventory Risk
+- Records with inventory below an exploratory 150-unit threshold
+- Store-level filtering
+- Product inventory details
+- Preliminary inventory risk monitoring
+
+### 3. Trends
+- Stockout records over time
+- Date-range filtering
+- Historical stockout pattern investigation
+
+## Key Findings
+
+### Promotional Demand
+
+Promotional records showed approximately 30% higher average demand than non-promotional records across the dataset.
+
+For groceries:
+- Non-promotional stockout rate: 0.61%
+- Promotional stockout rate: 0.83%
+
+This suggests promotional periods deserve additional inventory monitoring.
+
+### Store-Level Risk
+
+Store 4 showed elevated grocery stockout rates:
+- Non-promotional: 0.84%
+- Promotional: 1.14%
+
+### Product-Level Risk
+
+Store 4, Product 2, Groceries showed:
+- Non-promotional stockout rate: 0.98%
+- Promotional stockout rate: 2.80%
+
+This product represents a useful candidate for further promotional inventory investigation.
+
+### Early-Warning Analysis
+
+An exploratory inventory threshold of fewer than 150 units was evaluated using historical inventory records.
+
+The threshold identified both stockouts in the chronological test period, but also generated numerous false alerts.
+
+It should be considered a preliminary analytical rule, not a validated predictive model.
+
+## SQL Analysis
+
+SQL was used to investigate:
+
+- Inventory coverage
+- Stockout records and rates
+- Demand during stockouts
+- Store and product risk
+- Promotional demand patterns
+- Historical inventory levels
+- Preliminary early-warning indicators
+
+SQL techniques include aggregation, conditional logic, common table expressions, and window functions.
+
+## Methodology & Limitations
+
+- A stockout is defined as a record where inventory level equals zero.
+- Demand recorded during a stockout is not necessarily confirmed lost sales.
+- Promotion comparisons show associations, not proof of causation.
+- The inventory threshold of 150 units has not been validated for operational use.
+- The dataset does not provide confirmed supplier lead times or replenishment timing.
+- The dataset is synthetic and may not represent actual retail operations.
+
+## Repository Structure
+
+```text
+retail-inventory-stockout-analysis/
+│
+├── README.md
+├── PowerBI/
+├── SQL/
+├── Screenshots/
+└── Documentation/
+```
+
+## Reproducing the Project
+
+1. Download the dataset from the Kaggle source listed above.
+2. Import the dataset into Microsoft SQL Server.
+3. Create or use the `dbo.Sales_Data` table.
+4. Rename all columns with _ in place of all spaces.
+5. Run the SQL scripts in the SQL folder.
+5. Open the Power BI report.
+6. Configure its SQL Server DirectQuery connection to your database.
+
+## Project Objective
+
+This project demonstrates practical SQL analysis, business problem investigation, inventory risk evaluation, and Power BI reporting as part of my data analyst portfolio.
